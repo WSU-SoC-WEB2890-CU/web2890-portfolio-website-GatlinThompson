@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="TODO: Portfolio website ..." />
 
-<head>
-  <meta charset="utf-8">
-  <title>Portfolio website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="TODO: Portfolio website ...">
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
 
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
+  <body>
+    <!-- Your HTML goes here -->
+    <h1 class="display-2 text-center my-5 py-5">
+      <span class="d-block py-5 mt-5">
+        <i class="bi bi-filetype-html text-primary"></i> / <i class="bi bi-filetype-css text-danger"></i> /
+        <i class="bi bi-filetype-js text-success"></i>
+      </span>
 
-<body>
-  <!-- Your HTML goes here -->
-  <h1 class="display-2 text-center my-5 py-5">
-    <span class="d-block py-5 mt-5">
-      <i class="bi bi-filetype-html text-primary"></i> / 
-      <i class="bi bi-filetype-css text-danger"></i> / 
-      <i class="bi bi-filetype-js text-success"></i>
-    </span>
-    
-    Portfolio Website
-  </h1>
+      Portfolio Website
+    </h1>
+    <section>
+      <div>
+        <div class="video-holder">
+          <video width=" 320px" height="320" autoplay loop muted>
+            <source src="./assets/videos/blackhole_concept.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <h3>Concept</h3>
 
-  <script type="module" src="./javascripts/main.js"></script>
-</body>
+        <div class="video-holder mt-5">
+          <video width=" 320px" height="320" autoplay loop muted>
+            <source src="./assets/videos/blackhole_design.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <h3>Design</h3>
+        <div class="video-holder mt-5">
+          <video width=" 320px" height="320" autoplay loop muted>
+            <source src="./assets/videos/blackhole_post.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <h3>Production</h3>
+      </div>
+    </section>
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>
