@@ -1,0 +1,59 @@
+@use "../custom" as *;
+
+@mixin project-color($color) {
+    background-color: rgba($color, 0.65);
+}
+
+.project {
+
+    &-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6rem 1rem 6rem 1rem;
+
+        & > .project-color {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > div.project-logo {}
+
+            &.blackhole {
+                @include project-color(#EB8D00);
+            }
+            
+            &.car {
+                @include project-color(#1CDC52);
+            }
+
+            &.machina {
+                @include project-color(#FEB700);
+            }
+
+            &.lawn {
+                @include project-color(#11C4EC);
+            }
+
+            &.bootstrap {
+                    @include project-color(#DB13BB)
+            }
+
+            &.stock {
+                background-color: rgba(0, 255, 153, 0.598);
+            }
+        }
+
+        & > .project-image {
+
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+

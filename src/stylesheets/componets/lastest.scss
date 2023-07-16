@@ -1,0 +1,17 @@
+@use "../custom" as *;
+@use "../ui/header" as *;
+
+.latest {
+    background-color: $blue;
+
+    &-transition {
+        width: 100%;
+        height: 111px;
+        background: linear-gradient(rgba($blue, 0.1), rgba($blue, 1));
+    }
+
+    &-header {
+        @include make-header(flex-end);
+        
+    }
+}

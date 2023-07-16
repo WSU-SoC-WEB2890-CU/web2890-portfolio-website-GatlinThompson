@@ -1,0 +1,129 @@
+@use "../custom" as *;
+
+.intro {
+    width: 100%;
+    min-height: 100vh;
+    //background-color: red;
+    position: relative;
+
+    &-image {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(115, 119, 120);
+        position: absolute;
+        z-index: -100;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(17, 19, 17);
+            object-fit:cover;
+        }
+
+        & > div {
+            //background-color: yellowgreen;
+            background: linear-gradient(rgba($dark-blue, 0.1), rgba($dark-blue, 1));
+            height: 111px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+    &-content {
+        z-index: 100;
+        min-height: inherit;
+       // background-color: green;
+        display: grid;
+        grid-template-rows: 90px 0.5fr 1fr 1fr 1fr;
+
+        & > div.title {
+            grid-row: 3 / span 1;
+            padding-left: 1rem;
+
+            & > h2 {
+                &:nth-of-type(1) {
+                    //fix later
+                    font-size: 2rem;
+
+                    @include media-breakpoint-up(md) {
+                        font-size: 2.1rem;
+                    }
+                }
+                &:nth-of-type(2) {
+                    color: $light-gray;
+                    font-size: 1.75rem;
+                    margin-left: 6rem;
+                    @include media-breakpoint-up(md) {
+                        font-size: 1.8rem;
+                        margin-left: 6.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //Personal 
+
+    &-personal {
+        background-color: $blue;
+        padding: 1rem 0.5rem;
+        padding-bottom: 55px;
+        border-radius: 4rem 1.5rem 4rem 1.5rem;
+        border: 1px solid $white;
+        position: relative;
+
+        &-header {
+            font-size: 2rem;
+            @include media-breakpoint-up(md) {
+                font-size: 2.25rem;
+            }
+
+            & > p {
+                & > span {
+                    color: red; //fix color later
+                }
+            }
+        }
+
+        &-body {
+            font-size: 1.25rem;
+            padding: 0.5rem;
+            color: $light-gray;
+            @include media-breakpoint-up(md) {
+                font-size: 1.75rem;
+            }
+        }
+
+        &-image {
+
+            & > div {
+                width: 110px;
+                height: 110px;
+                border-radius: 100%;
+                background-color: red;
+                border: 3px solid $white;
+                transform: translateY(-50%);
+                overflow: hidden;
+                
+                @include media-breakpoint-up(md) {
+                    width: 140px;
+                    height: 140px;
+                }
+
+
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+        }
+    }
+
+}
+
+.personal-container {
+    margin-top: -7rem;
+}

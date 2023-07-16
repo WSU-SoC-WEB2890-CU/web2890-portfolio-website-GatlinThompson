@@ -1,18 +1,34 @@
+@use "custom" as *;
 /* Your styles go here */
-@import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@use "./componets/nav.scss";
+@use "./componets/intro.scss";
+@use "./componets/lastest.scss";
+@use "./componets/project.scss";
 
-.video-holder {
-  background-color: red;
-  width: 500px;
-  height: 300px;
-  border: 5px solid green;
-  overflow: hidden;
-  border-radius: 9rem 2rem 9rem 2rem;
 
-  & > video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+
+//UI
+@use "./ui/video.scss";
+@use "./ui/header.scss";
+
+
+
+
+
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
 }
+
+*, ::after, ::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  color: $white
+}
+
+body {
+  background-color: $dark-blue;
+  //position: relative;  
+}
+
