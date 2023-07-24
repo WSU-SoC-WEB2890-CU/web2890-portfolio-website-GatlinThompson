@@ -1,0 +1,87 @@
+@use "../custom" as *;
+
+.accordion {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  &-btn {
+    border-radius: 45px 15px;
+    color: $white;
+    position: relative;
+    background: linear-gradient(to right, $orange 25%, $purple 100%);
+    background-color: $blue;
+    border: 4px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding: 8px 20px 8px 35px;
+    z-index: 0;
+    margin-bottom: -1rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.5rem;
+      padding: 8px 20px 8px 35px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 94px 28px;
+      top: 4px;
+      left: 4px;
+      height: calc(100% - 8px);
+      width: calc(100% - 8px);
+      background-color: rgba($dark-blue, 1);
+      z-index: -1;
+
+      @include media-breakpoint-up(lg) {
+        border-radius: 44px 12px;
+      }
+    }
+  }
+
+  &-custom {
+    width: calc(100% - 20px);
+    margin: auto;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    & > p {
+      text-align: center;
+      margin: 0;
+      font-weight: 500;
+      font-size: 1rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.25rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+//Icon Styling
+.accordion-button::after {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-size: 1.75rem;
+
+  @include media-breakpoint-up(md) {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-size: 2.75rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 3.75rem;
+    height: 3.75rem;
+    background-size: 3.75rem;
+  }
+}

@@ -6,31 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="TODO: Portfolio website ..." />
-
+    <link rel="preload" href="./assets/images/sunset.jpg" as="image" />
     <link rel="stylesheet" href="./stylesheets/main.scss" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   </head>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark nav pt-4">
-      <div class="container-fluid">
+      <div class="nav-background" id="nav-background"></div>
+      <div class="container-fluid container-lg col-md-10 col-lg-10 mx-auto">
         <a class="navbar-brand" href="#">
           <div class="d-flex align-items-center">
-            <img src="assets/images/Group 25 (2).png" alt="logo image" width="48px" height="48px">
+            <img src="assets/images/web-icon.png" alt="logo image" class="nav-icon-logo" />
           </div>
         </a>
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="./assets/images/Navbar Button Toggler.png" alt="navbar icon" class="img-fluid" width="46px" height="46px">
+        <button
+          class="navbar-toggler p-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navbar-toggler"
+        >
+          <img src="./assets/images/navbar-button.png" alt="navbar icon" class="img-fluid" width="46px" height="46px" />
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-xl-center" id="navbarNav">
           <ul class="navbar-nav mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">Faq</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-size" href="#faq">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-size" href="#latest">Projects</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-size" href="#highlight">Highlight</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-size" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -41,134 +48,484 @@
     </div>
     <!--head-->
     <section id="intro">
-    <div class="intro">
-      <!--background image-->
-      <div class="intro-image">
-          <img src="./assets/images/arto-marttinen-a2ntpw5HJgg-unsplash.jpg" alt="sunset over a lake" class="">
+      <div class="intro">
+        <!--background image-->
+        <div class="intro-image">
+          <img src="./assets/images/sunset.jpg" alt="sunset over a lake" />
           <div class="intro-transition"></div>
-      </div>
-      <!--content-->
-      <div class="intro-content container">
-          <div class="title col-12  col-md-10 mx-auto">
-            <h2 class="fw-bold mb-0">Gatlin Thompson</h2>
-            <h2 class="fw-light">Web Developer</h2>
-          </div>
         </div>
-    </div>
-    <!--Personal-->
-    <div class="container">
-      <div class=" col-11 col-md-9 mx-auto personal-container">
-        <div class="col-12 mx-auto intro-personal">
-          <div class="col-12 text-center intro-personal-header">
-            <p>Designing Ideas into <span>Realities</span></p>
-          </div>
-          <div class="intro-personal-body col-12 text-center">
-            <p>Hello there, my name is Gatlin Thompson; I have focused on web development over the past few years. Designing and Developing websites have been my passion since I was young. Over the years, my approach to websites has changed, gathering more techniques for better design. Please look through my projects over the years to see what ideas I can turn into reality.</p>
-          </div>
-        </div>
-        <div class="col-12 intro-personal-image">
-          <div class="mx-auto">
-            <img src="./assets/images/5fa6aa29f1b5f1da095118ab401634e5.png" alt="creator of site">
+        <!--content-->
+        <div class="intro-content container">
+          <div class="title col-12 col-md-10 mx-auto">
+            <h2 class="mb-0"><span>G</span>atlin <span>T</span>hompson</h2>
+            <h2 class="">Web Developer</h2>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--Latest Projects-->
-  <section id="latest">
-    <div class="latest-transition"></div>
+      <!--Personal-->
+      <div class="container">
+        <div class="col-11 col-md-9 col-lg-7 mx-auto personal-container">
+          <div class="col-12 mx-auto intro-personal">
+            <div class="col-12 col-lg-8 mx-lg-auto text-center mx-0 intro-personal-header">
+              <p>Designing Ideas into <span>Realities</span></p>
+            </div>
+            <div class="intro-personal-body col-12 text-center">
+              <p>
+                Hello there, my name is Gatlin Thompson; I have focused on web development over the past few years.
+                Designing and Developing websites have been my passion since I was young. Over the years, my approach to
+                websites has changed, gathering more techniques for better design. Please look through my projects over
+                the years to see what ideas I can turn into reality.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 intro-personal-image">
+            <div class="mx-auto">
+              <img src="./assets/images/maker.png" alt="creator of site" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Latest Projects-->
+    <section id="latest">
+      <div class="latest-transition"></div>
       <div class="latest">
         <div class="latest-header-container">
           <h2 class="text-center">Recent Projects</h2>
           <div class="latest-header">
-              <div class="latest-header-square"></div>
-              <div class="latest-header-line"></div>
+            <div class="latest-header-square"></div>
+            <div class="latest-header-line"></div>
           </div>
         </div>
         <!--Content-->
-        <div class="latest-content">
-          <!--Project Item-->
-          <div class="col-12">
+        <div class="latest-content container">
+          <div class="row">
+            <!--Project Item-->
+            <div class="col-12 col-md-6 col-lg-4">
               <div class="col-11 mx-auto project-container">
                 <div class="project-color blackhole">
-                    <p>StockTrader</p>
-                    <img src="" alt="">
+                  <img src="./assets/images/astro-fuel-log.png" alt="astro fuel logo" loading="lazy" />
                 </div>
                 <div class="project-image">
-                  <img src="./assets/images/arpad-czapp-SQ9GJ6vkuOM-unsplash.jpg">
+                  <img src="./assets/images/blackhole.jpg" alt="image of a blackhole" loading="lazy" />
+                </div>
+                <div class="project-info">
+                  <div class="project-info-body">
+                    <div class="project-info-text">
+                      <p>AN EDUCATIONAL SPACE THAT EXPLORES THE ODDITIES OF OUTER-SPACE</p>
+                    </div>
+                    <button class="project-info-btn">
+                      <a href="https://frolicking-peony-3fa0b5.netlify.app">Check it out <span>></span></a>
+                    </button>
+                  </div>
                 </div>
               </div>
-          </div>
-          <!--end-->
-          <!--Project Item-->
-          <div class="col-12">
-            <div class="col-11 mx-auto project-container">
-              <div class="project-color car">
-                <div class="project-logo">
-                  <img src="./assets/images/Vector.png" alt="cardeal logo" class="img-fluid">
+            </div>
+            <!--end-->
+            <!--Project Item-->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-11 mx-auto project-container">
+                <div class="project-color car">
+                  <div class="project-logo">
+                    <img src="./assets/images/cardeal-logo.png" alt="cardeal logo" loading="lazy" />
+                  </div>
                 </div>
-                  
+                <div class="project-image">
+                  <img src="./assets/images/car.jpg" alt="old bug on raod" loading="lazy" />
+                </div>
+                <div class="project-info">
+                  <div class="project-info-body">
+                    <div class="project-info-text">
+                      <p>CAR DEAL WITH QUICK RESPONSE TIME. HIGHLIGHTS THAT SHOW RECENT PURCHASES</p>
+                    </div>
+                    <button class="project-info-btn">
+                      <a href="https://incandescent-praline-cb6778.netlify.app">Check it out <span>></span></a>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="project-image">
-                <img src="./assets/images/arpad-czapp-SQ9GJ6vkuOM-unsplash.jpg">
+            </div>
+            <!--end-->
+            <!--Project Item-->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-11 mx-auto project-container">
+                <div class="project-color machina">
+                  <p>EX MACHINA</p>
+                </div>
+                <div class="project-image">
+                  <img src="./assets/images/code.jpg" alt="coding" loading="lazy" />
+                </div>
+                <div class="project-info">
+                  <div class="project-info-body">
+                    <div class="project-info-text">
+                      <p>
+                        SITE SHOWCASE THE EASE OF USE WITH SASS. LOWERING THE AMOUNT OF REPETITIVE CODE IN A STYLESHEET
+                      </p>
+                    </div>
+                    <button class="project-info-btn">
+                      <a href="https://peaceful-belekoy-83ab4a.netlify.app/">Check it out <span>></span></a>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-        </div>
-        <!--end-->
-        <!--Project Item-->
-        <div class="col-12">
-          <div class="col-11 mx-auto project-container">
-            <div class="project-color machina">
-                <p>EX MACHINA</p>
+            <!--end-->
+            <!--Project Item-->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-11 mx-auto project-container">
+                <div class="project-color lawn">
+                  <p>Lawn Buddies</p>
+                </div>
+                <div class="project-image">
+                  <img src="./assets/images/grass.jpg" alt="grass" loading="lazy" />
+                </div>
+                <div class="project-info">
+                  <div class="project-info-body">
+                    <div class="project-info-text">
+                      <p>LAWN CARE BUSINESS WITH INSTANTANEOUS QUOTE FOR YOUR HOME LAWN NEEDS</p>
+                    </div>
+                    <button class="project-info-btn">
+                      <a href="https://gleaming-alpaca-c239fe.netlify.app">Check it out <span>></span></a>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="project-image">
-              <img src="./assets/images/arpad-czapp-SQ9GJ6vkuOM-unsplash.jpg">
+            <!--end-->
+            <!--Project Item-->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-11 mx-auto project-container">
+                <div class="project-color bootstrap">
+                  <img src="./assets/images/bootstrap-icon.png" alt="bootstrap icon" loading="lazy" />
+                </div>
+                <div class="project-image">
+                  <img src="./assets/images/simple-code.jpg" alt="coding on laptop" loading="lazy" />
+                </div>
+                <div class="project-info">
+                  <div class="project-info-body">
+                    <div class="project-info-text">
+                      <p>DEMONSTRATES COMMON BOOTSTRAP RESPONSIVE LAYOUT</p>
+                    </div>
+                    <button class="project-info-btn">
+                      <a href="https://ephemeral-taiyaki-a1cc8a.netlify.app">Check it out <span>></span></a>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!--end-->
+            <!--Project Item-->
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-11 mx-auto project-container">
+                <div class="project-color stock">
+                  <p>Stock Trader</p>
+                </div>
+                <div class="project-image">
+                  <img src="./assets/images/stock-laptop.jpg" alt="laptop with code" loading="lazy" />
+                </div>
+                <div class="project-info">
+                  <div class="project-info-body">
+                    <div class="project-info-text">
+                      <p>SITE THE FOCUS ON THE USE OF VUE TO SHOWCASE DATABASES AND COMPONENTS</p>
+                    </div>
+                    <button class="project-info-btn">
+                      <a href="https://delightful-donut-e43e21.netlify.app">Check it out <span>></span></a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end-->
           </div>
-      </div>
-      <!--end-->
-      <div class="col-12">
-        <div class="col-11 mx-auto project-container">
-          <div class="project-color lawn">
-              <p>Lawn Buddies</p>
-          </div>
-          <div class="project-image">
-            <img src="./assets/images/arpad-czapp-SQ9GJ6vkuOM-unsplash.jpg">
-          </div>
         </div>
-    </div>
-    <!--end-->
-
-        </div>
-      </div>
-    
-  </section>
-    <!--Main End-->
-
-
-    <section class="container">
-      <div class="row px-2 mx-auto">
-        <div class="video-holder col-12 mx-auto p-0">
-          <video autoplay loop muted>
-            <source src="./assets/videos/blackhole_concept.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h3>Concept</h3>
-
-        <div class="video-holder mt-5 col-12 mx-auto p-0">
-          <video autoplay loop muted>
-            <source src="./assets/videos/blackhole_design.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h3>Design</h3>
-        <div class="video-holder mt-5 col-12 mx-auto p-0">
-          <video autoplay loop muted>
-            <source src="./assets/videos/blackhole_post.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h3>Production</h3>
       </div>
     </section>
+    <!--Highlight-->
+    <section id="highlight">
+      <div class="highlight mt-5 pb-0">
+        <div class="highlight-header-container">
+          <h2 class="text-end">Highlighted Project</h2>
+          <div class="highlight-header">
+            <div class="highlight-header-square"></div>
+            <div class="highlight-header-line"></div>
+          </div>
+        </div>
+      </div>
+      <!--Content-->
+      <div class="container">
+        <div class="col-10 mx-auto highlight-logo">
+          <a href="https://frolicking-peony-3fa0b5.netlify.app">
+            <img src="./assets/images/astro-fuel-log.png" alt="Astro-Fuel logo" class="img-fluid" loading="lazy"
+          /></a>
+        </div>
+        <!--Carousel-->
+        <div
+          id="carousel"
+          class="carousel slide col-12 mx-auto highlight-carousel-container pb-3"
+          data-bs-ride="carousel"
+          data-bs-touch="true"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active px-5">
+              <div class="highlight-carousel">
+                <img src="./assets/images/website1.png" class="d-block mx-auto" alt="Astro-Fuel Website" />
+              </div>
+            </div>
+            <div class="carousel-item px-5">
+              <div class="highlight-carousel">
+                <img src="./assets/images/website2.jpg" class="d-block mx-auto" alt="Astro-Fuel Website" />
+              </div>
+            </div>
+            <div class="carousel-item px-5">
+              <div class="highlight-carousel">
+                <img src="./assets/images/website3.png" class="d-block mx-auto" alt="Astro-Fuel Website" />
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--Carousel End-->
+        <div class="col-12 text-center highlight-intro mt-5 col-lg-11 mx-auto">
+          <p>
+            The Astro-Fuel Project was designed to be and educational site that explore the science and knowledge of
+            outer space. While the main purpose is for learning aspects of it weren’t meant to be engaging in an artful
+            tone. Overtime the designing process and overall experience in creating website and improved, finding better
+            ways and stepping into the industry standard.
+          </p>
+        </div>
+        <!--Accordion-->
+        <div class="col-12 col-lg-9 mx-auto">
+          <div class="accordion col-12" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item my-4 my-md-5">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button accordion-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Expectations
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body accordion-custom bg-primary">
+                  <p>
+                    The project entail creating 6 pages each that were design in various ways. Using bootstrap as a
+                    framework, the project was made in a mobile-first design. With that in mind the design process was
+                    first conducted to make sure that phone users were cater to.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-4 my-md-5">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed accordion-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  Challenges
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body accordion-custom bg-primary">
+                  <p>
+                    Like most site, creating a theme for the site was undoubtably the biggest challenge to overcome.
+                    Always as adding a transition to object in order to create a more immersive webpage.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item my-4 my-md-5">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed accordion-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  Successes
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body accordion-custom bg-primary">
+                  <p>
+                    From the project, I was able to acquire more information on how certain animation found in other web
+                    pages are taken pages. Research more into java script to help create the desired functionality of
+                    the site. Adapting to Sass from CSS for better organization of styling. All in all, this was a
+                    better enjoyable project to do.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Accordion End-->
+        <!--Blackhole Process-->
+        <div class="black-hole container">
+          <div class="col-12 text-center">
+            <h1 class="black-hole-title">The Black Hole Process</h1>
+          </div>
+          <!--Content-->
+          <div class="row">
+            <!--Video Item-->
+            <div class="black-hole-item col-10 col-md-11 col-lg-10 p-0 mx-auto mx-md-0 me-md-auto">
+              <div class="black-hole-video mb-0 z-3 col-11 col-md-5 mx-auto">
+                <!--video-->
+                <div class="video-holder mx-auto p-0">
+                  <video autoplay loop muted>
+                    <source src="./assets/videos/blackhole_concept.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+              <!--body-->
+              <div class="black-hole-body z-1 col-12 col-md mx-auto">
+                <div class="black-hole-body-context">
+                  <h3 class="text-center">Concept</h3>
+                  <p>
+                    The black hole simulation was first dawn into existence, as you can see from the concept, this is
+                    the blueprints for how it was made.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--end-->
+            <!--Video Item-->
+            <div class="black-hole-item right-sider col-10 col-md-11 col-lg-10 p-0 mx-auto mx-md-0 ms-md-auto">
+              <div class="black-hole-video mb-0 z-3 col-11 col-md-5 mx-auto order-md-2">
+                <!--video-->
+                <div class="video-holder mx-auto p-0">
+                  <video autoplay loop muted>
+                    <source src="./assets/videos/blackhole_design.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+              <!--body-->
+              <div class="black-hole-body z-1 col-12 col-md mx-auto order-md-1 right-side">
+                <div class="black-hole-body-context right-side">
+                  <h3 class="text-center">Design</h3>
+                  <p>
+                    The next step is creating the virtual design. Built from the concept this gives more light to what
+                    the “black hole simulation” was going to be.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--end-->
+            <!--Video Item-->
+            <div class="black-hole-item col-10 col-md-11 col-lg-10 p-0 mx-auto mx-md-0 me-md-auto">
+              <div class="black-hole-video mb-0 z-3 col-11 col-md-5 mx-auto">
+                <!--video-->
+                <div class="video-holder mx-auto p-0">
+                  <video autoplay loop muted>
+                    <source src="./assets/videos/blackhole_post.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+              <!--body-->
+              <div class="black-hole-body z-1 col-12 col-md mx-auto">
+                <div class="black-hole-body-context">
+                  <h3 class="text-center">Production</h3>
+                  <p>
+                    After different alterations the final version it brought to life and highlights the value using
+                    animations and java script to give the page some unique character.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--end-->
+          </div>
+        </div>
+        <!--Blackhole Process End-->
+      </div>
+    </section>
+    <!--Contact-->
+    <section id="contact">
+      <div class="contact mt-5">
+        <div class="contact-header-container">
+          <h2 class="text-center">Get in Touch</h2>
+          <div class="contact-header">
+            <div class="contact-header-square"></div>
+            <div class="contact-header-line"></div>
+          </div>
+        </div>
+        <div class="col-12 contact-subheader"><p>Interested in a project, let’s get in touch</p></div>
+        <!--Content-->
+        <div class="container mt-4 mt-lg-5">
+          <div class="col-11 mx-auto pt-lg-3">
+            <!--Form-->
+            <form class="contact-form row" action="#">
+              <div class="col-12 col-lg-6">
+                <div class="contact-form-input mb-4 mb-lg-5">
+                  <p>Name</p>
+                  <input type="text" name="name" />
+                </div>
+                <div class="contact-form-input">
+                  <p>Email</p>
+                  <input type="email" name="email" />
+                </div>
+                <div class="col-8 col-xl-7 mx-auto mt-5 d-none d-lg-block">
+                  <button class="contact-btn">
+                    <div>
+                      <div class="contact-btn-image">
+                        <img src="./assets/images/mail.png" alt="evelope" />
+                      </div>
+                      <p>Send</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <!--Message-->
+              <div class="col-12 mt-4 mt-lg-0 col-lg-6">
+                <div class="contact-form-input">
+                  <p>Message</p>
+                  <textarea rows="8"></textarea>
+                </div>
+              </div>
+              <!--Button-->
+              <div class="col-8 col-md-6 d-lg-none mx-auto mt-4">
+                <button class="contact-btn">
+                  <div>
+                    <div class="contact-btn-image">
+                      <img src="./assets/images/mail.png" alt="evelope" />
+                    </div>
+                    <p>Send</p>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container-fluid footer-content">
+        <div class="icon-container">
+          <a href="https://www.facebook.com/dreather11"><i class="bi bi-facebook footer-icon"></i></a>
+          <a href="https://twitter.com/Dreigis1"><i class="bi bi-twitter footer-icon"></i></a>
+          <a href="https://www.instagram.com/gatlinthompson11/"><i class="bi bi-instagram footer-icon"></i></a>
+        </div>
+        <div class="footer-text">
+          <p>&copy; 2023 Gatlin Thompson</p>
+        </div>
+      </div>
+    </footer>
+    <!--Main End-->
     <script type="module" src="./javascripts/main.js"></script>
   </body>
 </html>

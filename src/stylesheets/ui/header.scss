@@ -1,76 +1,93 @@
 @use "../custom" as *;
 
-@mixin make-header {
-    display: flex;
-
-    & > div {
-          width: 100px;
-          height: 100px;
-          background-color: red;
-          transform: rotateX(45deg);
-    }
-
-}
-
 @mixin make-header($content: flex-end) {
-    $order1: 1;
-    $order2: 2;
-    $alignment: flex-start;
-    $color-pattern: right;
+  $order1: 1;
+  $order2: 2;
+  $alignment: flex-start;
+  $color-pattern: right;
 
- @if ($content == "flex-end") {
+  @if ($content == "flex-end") {
     $order1: 1;
     $order2: 2;
     $color-pattern: right;
     $alignment: flex-start;
- }
- @else {
+  } @else {
     $order1: 2;
     $order2: 1;
     $color-pattern: left;
     $alignment: flex-end;
- }
+  }
 
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: $content;
+  align-items: center;
+
+  &-square {
+    width: 20px;
+    height: 20px;
+    background-color: $orange;
+    transform: rotate(45deg);
+    order: $order1;
+
+    @include media-breakpoint-up(lg) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &-line {
+    height: 5px;
+    width: calc(87%);
+    background: linear-gradient(to $color-pattern, $orange, $purple);
+    order: $order2;
+
+    @include media-breakpoint-up(lg) {
+      height: 10px;
+      width: calc(75%);
+    }
+  }
+
+  &-container {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: $content;
-    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 1rem 0rem 4rem;
 
-    &-square {
-        width: 20px;
-        height: 20px;
-        background-color: $orange;
-        transform: rotate(45deg);
-        order: $order1;
+    @include media-breakpoint-up(lg) {
+      padding: 5rem 0rem 4rem;
     }
 
-    &-line {
-        height: 5px;
-        width: calc(87%);
-        background: linear-gradient(to $color-pattern, $orange, $purple );
-        order: $order2;
-    }
+    & > h2 {
+      margin-bottom: -0.4rem;
+      font-family: "Oswald", sans-serif;
+      font-weight: 700;
 
-    &-container {
-        display: flex;
-        flex-flow: column nowrap;
-        width: 100%;
-        padding: 1rem  0rem 4rem;
-
-        & > h2 {
-            margin-bottom: -0.4rem;
-           @if($content == "flex-end") {
-            margin-left: 13%;
-           }
-           @else {
-            margin-right: 13%;
-           }
-            align-self:  $alignment;
-            font-size: 2.25rem;
+      @if ($content == "flex-end") {
+        margin-left: 13%;
+        @include media-breakpoint-up(lg) {
+          margin-left: 25%;
         }
+      } @else {
+        margin-right: 13%;
+        @include media-breakpoint-up(lg) {
+          margin-right: 25%;
+        }
+      }
+      align-self: $alignment;
+      font-size: 2.25rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 3rem;
+        }
+      }
     }
+  }
 }
 
 .header {
-    @include make-header(flex-end);
+  @include make-header(flex-end);
 }

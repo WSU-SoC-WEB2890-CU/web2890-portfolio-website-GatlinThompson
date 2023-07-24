@@ -1,34 +1,36 @@
 @use "custom" as *;
-/* Your styles go here */
+
+//Componets
 @use "./componets/nav.scss";
 @use "./componets/intro.scss";
 @use "./componets/lastest.scss";
 @use "./componets/project.scss";
-
-
+@use "./componets/highlight.scss";
+@use "./componets/accordion.scss";
+@use "./componets/blackhole.scss";
+@use "./componets/contact.scss";
+@use "./componets/footer.scss";
 
 //UI
 @use "./ui/video.scss";
 @use "./ui/header.scss";
-
-
-
-
+@use "./ui/color.scss";
 
 :root {
   box-sizing: border-box;
   font-size: 16px;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  color: $white
+  color: $white;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   background-color: $dark-blue;
-  //position: relative;  
 }
-

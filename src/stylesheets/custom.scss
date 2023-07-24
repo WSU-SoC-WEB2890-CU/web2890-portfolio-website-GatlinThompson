@@ -1,12 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap");
 
-$dark-blue: #030D1E;
+$dark-blue: #030d1e;
+$dark-gray: #0e0e0e;
 $blue: #162031;
-$white: #FCFAFA;
-$light-gray: #E2E2E2;
-$purple: #8C1CC0;
-$orange: #ED9F36;
+$white: #fcfafa;
+$light-gray: #e2e2e2;
+$purple: #8c1cc0;
+$dark-purple: #511b6a;
+$orange: #ed9f36;
+$black-mirror: rgba(0, 0, 0, 0.209);
+$gray: #d9d9d9;
+
+$navbar-toggler-focus-width: 0;
+$navbar-dark-toggler-border-color: rgba($white, 0);
+$navbar-dark-color: $white;
+
+//Carousel
+$carousel-control-width: 15%;
+$carousel-control-prev-icon-bg: url("../assets/images/icon-left.png");
+$carousel-control-next-icon-bg: url("../assets/images/icon-right.png");
+
+//Accordion
+$accordion-button-icon: url("../assets/images/icon-down.png");
+$accordion-button-active-icon: url("../assets/images/icon-down.png");
+$accordion-button-focus-box-shadow: none;
+$accordion-bg: transparent;
+$accordion-button-active-color: transparent;
+$accordion-button-bg: transparent;
+$accordion-button-active-bg: transparent;
+$accordion-button-active-color: $white;
+$accordion-border-radius: 45px 15px 45px 20px;
 
 @import "bootstrap/scss/bootstrap.scss";
-@import "bootstrap-icons/font/bootstrap-icons.css";
-
-
+//@import "bootstrap-icons/font/bootstrap-icons.css";
