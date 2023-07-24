@@ -18,10 +18,14 @@
       background-color: rgb(17, 19, 17);
       object-fit: cover;
       object-position: top 0 left 0;
+
+      @include media-breakpoint-up(lg) {
+        object-position: unset;
+      }
     }
 
     & > div {
-      background: linear-gradient(rgba($dark-blue, 0.1), rgba($dark-blue, 1));
+      background: linear-gradient(rgba($dark-blue, 0), rgba($dark-blue, 1));
       height: 111px;
       width: 100%;
       position: absolute;
