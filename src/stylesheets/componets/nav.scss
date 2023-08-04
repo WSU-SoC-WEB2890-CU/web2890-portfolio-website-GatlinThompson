@@ -19,11 +19,11 @@ nav {
     backdrop-filter: blur(2px);
     position: absolute;
     z-index: -100;
-    transition: all 700ms ease;
+    transition: all 350ms ease-in;
 
     &.clicked {
       height: 100%;
-      transition: all 200ms ease-out !important;
+      transition: all 150ms ease !important;
     }
   }
 
