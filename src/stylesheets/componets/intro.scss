@@ -136,6 +136,8 @@
         font-family: "Work Sans", sans-serif;
         font-weight: 500;
         & > span {
+          font-family: "Work Sans", sans-serif;
+          font-weight: 500;
           background: linear-gradient(188deg, $purple 15.56%, $orange 61.99%);
           -webkit-text-fill-color: transparent;
           -webkit-background-clip: text;
@@ -155,6 +157,15 @@
 
       & > p {
         color: $light-gray;
+      }
+
+      & > h2 {
+        background: linear-gradient(188deg, $purple 15.56%, $orange 61.99%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-family: "Work Sans", sans-serif;
+        font-size: 3rem;
+        font-weight: 500;
       }
     }
 
@@ -192,5 +203,12 @@
 }
 
 .personal-container {
-  margin-top: -7rem;
+  margin-top: -10rem;
+
+  @include media-breakpoint-up(md) {
+    margin-top: -15rem;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: -12.5rem;
+  }
 }
