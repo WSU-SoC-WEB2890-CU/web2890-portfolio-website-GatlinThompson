@@ -1,0 +1,13 @@
+@use "../custom" as *;
+
+@mixin color {
+  background: linear-gradient(to right, $orange 40%, $purple);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@mixin color2 {
+  background: linear-gradient(to right, $orange 30%, $purple);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
